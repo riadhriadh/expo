@@ -18,6 +18,7 @@
 
 - Remove "Please" from warnings and errors ([#36862](https://github.com/expo/expo/pull/36862) by [@brentvatne](https://github.com/brentvatne))
 - Remove internal routes from sitemap and add unit tests for this screen ([#36856](https://github.com/expo/expo/pull/36856) by [@Ubax](https://github.com/Ubax))
+- Update matching patterns for pathname groups and parameters ([#36961](https://github.com/expo/expo/pull/36961) by [@kitten](https://github.com/kitten))
 
 ## 5.0.7 — 2025-05-13
 
