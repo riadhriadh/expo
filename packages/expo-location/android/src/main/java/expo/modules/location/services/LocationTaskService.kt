@@ -71,6 +71,7 @@ class LocationTaskService : Service() {
     val title = serviceOptions.getString("notificationTitle")
     val body = serviceOptions.getString("notificationBody")
     val color = colorStringToInteger(serviceOptions.getString("notificationColor"))
+    val ongoing = serviceOptions.getBoolean("ongoing", false) 
 
     title?.let { builder.setContentTitle(title) }
     body?.let { builder.setContentText(body) }
@@ -87,7 +88,7 @@ class LocationTaskService : Service() {
       val contentIntent = PendingIntent.getActivity(this, 0, it, PendingIntent.FLAG_UPDATE_CURRENT or mutableFlag)
       builder.setContentIntent(contentIntent)
     }
-
+     builder.setOngoing(ongoing) 
     return builder.setCategory(Notification.CATEGORY_SERVICE)
       .setSmallIcon(applicationInfo.icon)
       .build()
